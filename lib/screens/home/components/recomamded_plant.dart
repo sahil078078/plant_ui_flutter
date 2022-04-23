@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:plant_ui_flutter/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -18,21 +20,42 @@ class RecommedsdPlant extends StatelessWidget {
             title: 'Samantha',
             price: 440,
             country: 'russia',
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecommedPlantCard(
             image: 'assets/images/image_2.png',
             title: 'Angelica',
             price: 450,
             country: 'russia',
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecommedPlantCard(
             image: 'assets/images/image_3.png',
             title: 'Samantha',
             price: 430,
             country: 'russia',
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -70,7 +93,9 @@ class RecommedPlantCard extends StatelessWidget {
         children: [
           Image.asset(image),
           GestureDetector(
-            onTap: press(),
+            onTap: () {
+              press();
+            },
             child: Container(
               padding: const EdgeInsets.all(kDefaultPadding / 4),
               decoration: BoxDecoration(
