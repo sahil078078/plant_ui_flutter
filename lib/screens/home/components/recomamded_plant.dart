@@ -33,7 +33,7 @@ class RecommedsdPlant extends StatelessWidget {
             image: 'assets/images/image_2.png',
             title: 'Angelica',
             price: 450,
-            country: 'russia',
+            country: 'usa',
             press: () {
               Navigator.push(
                 context,
@@ -47,7 +47,7 @@ class RecommedsdPlant extends StatelessWidget {
             image: 'assets/images/image_3.png',
             title: 'Samantha',
             price: 430,
-            country: 'russia',
+            country: 'india',
             press: () {
               Navigator.push(
                 context,
